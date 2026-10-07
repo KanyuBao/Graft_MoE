@@ -1,0 +1,63 @@
+{
+  "output_root": "./outputs/main",
+  "models": {
+    "olmoe": {
+      "path": "./models/olmoe",
+      "data": "./data/processed/olmoe",
+      "descriptors": "./artifacts/descriptors/olmoe",
+      "old_experts": 64,
+      "expand_to": 96,
+      "top_k": 8
+    },
+    "qwen": {
+      "path": "./models/qwen",
+      "data": "./data/processed/qwen",
+      "descriptors": "./artifacts/descriptors/qwen",
+      "old_experts": 60,
+      "expand_to": 90,
+      "top_k": 4
+    }
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "attention": "sdpa",
+  "clusters": 8,
+  "steps": 4096,
+  "accumulation": 4,
+  "learning_rate": 0.0001,
+  "lr_warmup_steps": 128,
+  "weight_decay": 0.01,
+  "balance_weight": 0.01,
+  "warm_steps": 64,
+  "warm_lr": 0.0001,
+  "warm_batch": 128,
+  "gradient_batches": 10,
+  "quick_valid_blocks": 256,
+  "eval_every": 512,
+  "save_every": 512,
+  "log_every": 16,
+  "benchmark_steps": 30,
+  "tasks": [
+    "hellaswag",
+    "arc_challenge",
+    "piqa",
+    "winogrande",
+    "mmlu",
+    "gsm8k"
+  ],
+  "cpu_threads": 4,
+  "disk_reserve_gib": 10,
+  "resource_wait_minutes": 10,
+  "keep_optimizer_checkpoints": false,
+  "benchmark_ready_root": "./data/benchmarks",
+  "routing_tau": 0.2,
+  "save_final_weights": true,
+  "descriptor_seed": 42,
+  "descriptor_fit_fraction": 0.75,
+  "descriptor_probe_count": 256,
+  "descriptor_projection_dim": 128,
+  "descriptor_probe_batch": 128
+}

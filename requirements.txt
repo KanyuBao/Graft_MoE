@@ -1,0 +1,12 @@
+numpy==1.26.4
+transformers==4.57.1
+accelerate==1.10.1
+peft==0.17.1
+datasets==3.1.0
+huggingface-hub==0.35.1
+tokenizers==0.22.1
+lm-eval==0.4.9.1
+psutil>=5.9,<8
+matplotlib>=3.8,<3.11
+safetensors>=0.4.3
+sentencepiece>=0.2

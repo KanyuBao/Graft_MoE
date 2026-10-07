@@ -1,0 +1,2 @@
+# Preserve the user's working torch 2.3 / CUDA 12.1 installation.
+torch==2.3.0
